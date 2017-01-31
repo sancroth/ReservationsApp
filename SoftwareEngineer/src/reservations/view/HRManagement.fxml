@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservations.controllers.HrManagementController">
+   <children>
+      <TabPane prefHeight="468.0" prefWidth="540.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Add User">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label id="glass-text" layoutX="75.0" layoutY="103.0" stylesheets="@LoginButton.css" text="Username" />
+                        <Label id="glass-text" layoutX="77.0" layoutY="152.0" stylesheets="@LoginButton.css" text="Password" />
+                        <Label id="glass-text" layoutX="83.0" layoutY="200.0" stylesheets="@LoginButton.css" text="E-mail" />
+                        <CheckBox fx:id="addUserIsAdmin" layoutX="180.0" layoutY="245.0" mnemonicParsing="false" />
+                        <TextField layoutX="169.0" layoutY="197.0" prefHeight="25.0" prefWidth="179.0" promptText="eg.canthackthis@gmail.com" />
+                        <TextField fx:id="addUserPassword" layoutX="169.0" layoutY="149.0" prefHeight="25.0" prefWidth="177.0" promptText="eg.qwert" />
+                        <TextField fx:id="addUserUsername" layoutX="169.0" layoutY="100.0" prefHeight="25.0" prefWidth="176.0" promptText="eg.notAdmin" />
+                        <Label id="glass-text" layoutX="77.0" layoutY="244.0" stylesheets="@LoginButton.css" text="isAdmin" />
+                        <Button id="glass-grey" fx:id="addUserSubmitBtn" layoutX="257.0" layoutY="302.0" mnemonicParsing="false" onAction="#addUserSubmitAction" stylesheets="@LoginButton.css" text="Submit" />
+                        <Button id="glass-grey" fx:id="addUserCancelBtn" layoutX="173.0" layoutY="302.0" mnemonicParsing="false" stylesheets="@LoginButton.css" text="Cancel" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="removeUserTab" text="Remove User">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="userRemoveTable"  prefHeight="400.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="removeListId" prefWidth="64.0" text="ID" />
+                            <TableColumn fx:id="removeUserFirstNameClm" prefWidth="96.0" text="F.Name" />
+                              <TableColumn fx:id="removeUserLastNameClm" prefWidth="90.0" text="L.Name" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="287.0" layoutY="369.0" mnemonicParsing="false" text="Remove" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

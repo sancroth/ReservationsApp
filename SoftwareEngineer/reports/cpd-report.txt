@@ -1,0 +1,265 @@
+Found a 32 line (121 tokens) duplication in the following files: 
+Starting at line 63 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 120 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+				System.out.println("Username already in use");
+			}
+			DataBaseConnection.dbClose(connection, statement, resultset);
+			
+ 		}catch(SQLException se){
+ 			//Handle errors for JDBC
+	        se.printStackTrace();
+	        // If there is an error then rollback the changes.
+	        System.out.println("Rolling back data here....");
+		    try{
+		    	if(connection!=null)
+		    		connection.rollback();
+		    }catch(SQLException se2){
+	         se2.printStackTrace();
+		    }//end try
+ 			}catch(Exception e){
+ 				//Handle errors for Class.forName
+ 				e.printStackTrace();
+ 			}finally{
+ 				//finally block used to close resources
+ 				try{
+ 				if(statement!=null)
+ 					statement.close();
+ 				}catch(SQLException se2){
+ 				}// nothing we can do
+ 				try{
+ 					if(connection!=null)
+ 						connection.close();
+ 				}catch(SQLException se){
+ 					se.printStackTrace();
+ 				}//end finally try
+ 			}//end try
+=====================================================================
+Found a 32 line (121 tokens) duplication in the following files: 
+Starting at line 64 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 250 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+			}
+			DataBaseConnection.dbClose(connection, statement, resultset);
+			
+ 		}catch(SQLException se){
+ 			//Handle errors for JDBC
+	        se.printStackTrace();
+	        // If there is an error then rollback the changes.
+	        System.out.println("Rolling back data here....");
+		    try{
+		    	if(connection!=null)
+		    		connection.rollback();
+		    }catch(SQLException se2){
+	         se2.printStackTrace();
+		    }//end try
+ 			}catch(Exception e){
+ 				//Handle errors for Class.forName
+ 				e.printStackTrace();
+ 			}finally{
+ 				//finally block used to close resources
+ 				try{
+ 				if(statement!=null)
+ 					statement.close();
+ 				}catch(SQLException se2){
+ 				}// nothing we can do
+ 				try{
+ 					if(connection!=null)
+ 						connection.close();
+ 				}catch(SQLException se){
+ 					se.printStackTrace();
+ 				}//end finally try
+ 			}//end try
+ 		return added;
+=====================================================================
+Found a 31 line (120 tokens) duplication in the following files: 
+Starting at line 121 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 250 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+				}
+				DataBaseConnection.dbClose(connection,statement,resultset);
+ 	 		
+ 	 		}catch(SQLException se){
+ 	 			//Handle errors for JDBC
+ 		        se.printStackTrace();
+ 		        // If there is an error then rollback the changes.
+ 		        System.out.println("Rolling back data here....");
+ 			    try{
+ 			    	if(connection!=null)
+ 			    		connection.rollback();
+ 			    }catch(SQLException se2){
+ 		         se2.printStackTrace();
+ 			    }//end try
+ 	 			}catch(Exception e){
+ 	 				//Handle errors for Class.forName
+ 	 				e.printStackTrace();
+ 	 			}finally{
+ 	 				//finally block used to close resources
+ 	 				try{
+ 	 				if(statement!=null)
+ 	 					statement.close();
+ 	 				}catch(SQLException se2){
+ 	 				}// nothing we can do
+ 	 				try{
+ 	 					if(connection!=null)
+ 	 						connection.close();
+ 	 				}catch(SQLException se){
+ 	 					se.printStackTrace();
+ 	 				}//end finally try
+ 	 			}//end try
+=====================================================================
+Found a 10 line (47 tokens) duplication in the following files: 
+Starting at line 105 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 225 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 	 		try{
+ 	 			
+ 	 			while(resultset.next() && checkFlag==false){
+					int id=Integer.parseInt(resultset.getString("userId"));
+					if(editedUserId==id){
+						checkFlag=true;
+					}
+				}
+				if(checkFlag){
+					query="DELETE FROM login WHERE userId = '"+editedUserId+"'";
+=====================================================================
+Found a 8 line (46 tokens) duplication in the following files: 
+Starting at line 107 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 207 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 226 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 	 			while(resultset.next() && checkFlag==false){
+					int id=Integer.parseInt(resultset.getString("userId"));
+					if(editedUserId==id){
+						checkFlag=true;
+					}
+				}
+				if(checkFlag){
+					query="DELETE FROM login WHERE userId = '"+editedUserId+"'";
+=====================================================================
+Found a 9 line (45 tokens) duplication in the following files: 
+Starting at line 166 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 205 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 	 			case 1://change username
+ 	 				
+ 	 					while(resultset.next() && checkFlag==false){
+	 						int id=Integer.parseInt(resultset.getString("userId"));
+	 						if(editedUserId==id){
+	 							checkFlag=true;
+	 						}
+	 					}
+	 					if(checkFlag){
+=====================================================================
+Found a 7 line (44 tokens) duplication in the following files: 
+Starting at line 107 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 168 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 226 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 	 			while(resultset.next() && checkFlag==false){
+					int id=Integer.parseInt(resultset.getString("userId"));
+					if(editedUserId==id){
+						checkFlag=true;
+					}
+				}
+				if(checkFlag){
+=====================================================================
+Found a 8 line (37 tokens) duplication in the following files: 
+Starting at line 198 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 219 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+	 					}else{
+	 						System.out.print("The user with the id :");System.out.print(editedUserId);System.out.print("doesn't excist!");System.out.println();
+	 					}
+	 					
+	 					break;
+ 	 			
+ 	 			
+ 	 			case 2://change password
+=====================================================================
+Found a 5 line (36 tokens) duplication in the following files: 
+Starting at line 117 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 217 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 236 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+					System.out.println("User was deleted successfully.");
+					
+				}else{
+					System.out.print("The user with the id :");System.out.print(editedUserId);System.out.print("doesn't excist!");System.out.println();
+				}
+=====================================================================
+Found a 3 line (35 tokens) duplication in the following files: 
+Starting at line 119 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 198 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 238 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+				}else{
+					System.out.print("The user with the id :");System.out.print(editedUserId);System.out.print("doesn't excist!");System.out.println();
+				}
+=====================================================================
+Found a 6 line (34 tokens) duplication in the following files: 
+Starting at line 45 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\RoomsPresentationController.java
+Starting at line 57 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\RoomsPresentationController.java
+Starting at line 70 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\RoomsPresentationController.java
+Starting at line 82 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\RoomsPresentationController.java
+
+    private void checkForRooms(ActionEvent event) {
+        Stage dialog = new Stage();
+        dialog = loadNewScene(dialog);
+        Scene scene = new Scene(rootlayOut);
+        dialog.setScene(scene);
+        loadStage("RoomsReservation.fxml");
+=====================================================================
+Found a 8 line (33 tokens) duplication in the following files: 
+Starting at line 98 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 155 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 		public void deletePersonnel(){
+		
+ 			query="SELECT userId FROM login";
+ 	 		connection=DataBaseConnection.getDBConnection();
+ 	 		statement=DataBaseConnection.getDBStatement(connection);
+ 	 		resultset=DataBaseConnection.getDBResultSet(statement, query);
+ 	 		
+ 	 		try{
+=====================================================================
+Found a 5 line (27 tokens) duplication in the following files: 
+Starting at line 81 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\HrManagementController.java
+Starting at line 91 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\HrManagementController.java
+
+    	if(added== true){
+        	Alert alert = new Alert(AlertType.INFORMATION);
+        	alert.setTitle("User Creation Status");
+        	alert.setHeaderText(null);
+        	alert.setContentText("User Creation was completed successfully.");
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 50 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\LoginController.java
+Starting at line 56 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\LoginController.java
+
+    	Alert alert = new Alert(AlertType.INFORMATION);
+    	alert.setTitle("Login Status");
+    	alert.setHeaderText(null);
+    	alert.setContentText("Your Login was successfull.");
+=====================================================================
+Found a 3 line (25 tokens) duplication in the following files: 
+Starting at line 42 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 101 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 158 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 294 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+
+ 		connection=DataBaseConnection.getDBConnection();
+ 		statement=DataBaseConnection.getDBStatement(connection);
+ 		resultset=DataBaseConnection.getDBResultSet(statement, query);
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 308 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\PersonnelManagement.java
+Starting at line 70 of C:\Users\Nikos Senounta\Desktop\SoftwareEngineer\src\reservations\controllers\UserLogin.java
+
+ 	 			}
+ 	 			DataBaseConnection.dbClose(connection, statement, resultset);	
+ 	 		}catch (Exception se){
+ 	 			se.printStackTrace();
+ 	 		}
+ 	 		//System.out.println(personel.size());
+			return personel;

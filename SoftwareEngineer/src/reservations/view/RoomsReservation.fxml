@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservations.controllers.RoomReservationController">
+   <children>
+      <Separator layoutX="529.0" layoutY="51.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="529.0" AnchorPane.topAnchor="0.0" />
+      <Separator layoutX="6.0" layoutY="86.0" prefHeight="4.0" prefWidth="479.0" />
+      <Separator layoutX="7.0" layoutY="177.0" prefHeight="4.0" prefWidth="479.0" />
+      <Separator layoutX="7.0" layoutY="268.0" prefHeight="11.0" prefWidth="479.0" />
+      <ScrollBar layoutX="515.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="515.0" AnchorPane.topAnchor="0.0" />
+      <Button id="glass-grey" layoutX="545.0" layoutY="351.0" mnemonicParsing="false" stylesheets="@LoginButton.css" text="Back" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="14.0" />
+      <ImageView fx:id="roomImg1" fitHeight="73.0" fitWidth="108.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="roomImg2" fitHeight="73.0" fitWidth="108.0" layoutX="14.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="roomImg3" fitHeight="73.0" fitWidth="108.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="140.0" layoutY="14.0" text="Number Of Single Beds :" />
+      <Label layoutX="140.0" layoutY="104.0" text="Number Of Single Beds :" />
+      <Label layoutX="140.0" layoutY="200.0" text="Number Of Single Beds :" />
+      <Label layoutX="139.0" layoutY="31.0" text="Number Of DoubleBeds :" />
+      <Label layoutX="140.0" layoutY="121.0" text="Number Of Single Beds :" />
+      <Label layoutX="140.0" layoutY="217.0" text="Number Of Single Beds :" />
+      <Label layoutX="139.0" layoutY="51.0" text="Balcony :" />
+      <Label layoutX="139.0" layoutY="141.0" text="Balcony :" />
+      <Label layoutX="139.0" layoutY="234.0" text="Balcony :" />
+      <Label layoutX="245.0" layoutY="51.0" text="Available :" />
+      <Label layoutX="245.0" layoutY="141.0" text="Available :" />
+      <Label layoutX="243.0" layoutY="234.0" text="Available :" />
+      <Button id="glass-grey" layoutX="416.0" layoutY="47.0" mnemonicParsing="false" stylesheets="@LoginButton.css" text="Reserve" />
+      <Button id="glass-grey" layoutX="416.0" layoutY="137.0" mnemonicParsing="false" stylesheets="@LoginButton.css" text="Reserve" />
+      <Button id="glass-grey" layoutX="416.0" layoutY="230.0" mnemonicParsing="false" stylesheets="@LoginButton.css" text="Reserve" />
+      <Text layoutX="194.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="277.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="277.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="306.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
+      <Text layoutX="277.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="277.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="194.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
+      <Text layoutX="306.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
+      <Text layoutX="277.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+      <Text layoutX="277.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <Text layoutX="194.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yes" />
+      <Text layoutX="306.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No" />
+   </children>
+</AnchorPane>
