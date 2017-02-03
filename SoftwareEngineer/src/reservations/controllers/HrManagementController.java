@@ -11,12 +11,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Tab;
+
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.MouseEvent;
+
 
 
 public class HrManagementController {
@@ -37,7 +37,7 @@ public class HrManagementController {
     private CheckBox addUserIsAdmin;
 
     @FXML
-    private TextField addUserPassword; // NOPMD by Nikos Senounta on 30/1/2017 10:43 рм
+    private TextField addUserPassword; 
 
     @FXML
     private TextField addUserUsername;
@@ -66,10 +66,33 @@ public class HrManagementController {
     private TableColumn<Personel, String>removeUserLastNameClm;
 
     
-	private ObservableList<Personel> personel = FXCollections.observableArrayList(); // NOPMD by Nikos Senounta on 30/1/2017 10:44 рм
+	private ObservableList<Personel> personel = FXCollections.observableArrayList(); 
 
     
 	private PersonnelManagement getUsers;
+	
+    @FXML
+    private Button rmvUserBtn;
+
+
+    @FXML
+    void removeUser(ActionEvent event) {
+    	int selected = userRemoveTable.getSelectionModel().getSelectedIndex();
+    	int toRemove = removeListId.getCellData(selected);
+    	//System.out.println(toRemove);
+    	ObservableList<Personel> personelTmp = personel; 
+    	personel.remove(selected);
+    	userRemoveTable.getItems().removeAll(personelTmp);
+    	userRemoveTable.getItems().addAll(personel);
+    	PersonnelManagement userAdd = new PersonnelManagement("remove", "remove", 0, toRemove, 0);
+    	userAdd.deletePersonnel();
+    	Alert alert = new Alert(AlertType.INFORMATION);
+    	alert.setTitle("User Removal Status");
+    	alert.setHeaderText(null);
+    	alert.setContentText("User Removed.");
+    	alert.showAndWait();
+    	
+    }
 
     @FXML
     void addUserSubmitAction(ActionEvent event) {

@@ -36,14 +36,14 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="userRemoveTable"  prefHeight="400.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="userRemoveTable" prefHeight="400.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
                             <TableColumn fx:id="removeListId" prefWidth="64.0" text="ID" />
                             <TableColumn fx:id="removeUserFirstNameClm" prefWidth="96.0" text="F.Name" />
                               <TableColumn fx:id="removeUserLastNameClm" prefWidth="90.0" text="L.Name" />
                           </columns>
                         </TableView>
-                        <Button layoutX="287.0" layoutY="369.0" mnemonicParsing="false" text="Remove" />
+                        <Button fx:id="rmvUserBtn" layoutX="287.0" layoutY="369.0" mnemonicParsing="false" onAction="#removeUser" text="Remove" />
                      </children>
                   </AnchorPane>
             </content>
